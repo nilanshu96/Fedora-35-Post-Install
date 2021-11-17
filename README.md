@@ -4,7 +4,7 @@ Basic setup guide for Fedora 35 after installation
    ### To sync hardware clock with local time in case of a dual boot setup with Windows
    >sudo hwclock --systohc --localtime
    
-   ### Make use of the fastest mirror for updates**
+   ### Make use of the fastest mirror for updates
    >echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf echo 'deltarpm=true' | sudo tee -a /etc/dnf/dnf.conf
     
    ### Add repos providing free and nonfree/proprietary softwares like nvidia drivers, pycharm etc
@@ -18,7 +18,7 @@ Basic setup guide for Fedora 35 after installation
    
    **reboot the system**
    
-   ### Installs the latest nvidia driver (Requires the latest kernel)**
+   ### Installs the latest nvidia driver (Requires the latest kernel)
    >sudo dnf install akmod-nvidia
    
    ### checks the installed nvida version
