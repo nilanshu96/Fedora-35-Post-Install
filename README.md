@@ -87,10 +87,34 @@ Basic setup guide for Fedora 35 after installation
    >
    >sudo dnf install code
    
-## Issue Fixes
+## Issue Fixes (Do not apply below fixes without facing the issues first)
    ### Desktop glitching on resume Nvidia 495.44
    >change NVreg_PreserveVideoMemoryAllocations from 1 to 0 in /usr/lib/modprobe.d/nvidia-power-management.conf
 
    ### Gnome-Software won't show flatpak apps
    >Open System Monitor, end process of Gnome-Software and then start Gnome-Software again
+
+   ### Slow Internet Issue
+   >change /etc/systemd/resolved.conf to the following
+   ```
+   [Resolve]
+# Some examples of DNS servers which may be used for DNS= and FallbackDNS=:
+# Cloudflare: 1.1.1.1#cloudflare-dns.com 1.0.0.1#cloudflare-dns.com 2606:4700:4700::1111#cloudflare-dns.com 2606:4700:4700::1001#cloudflare-dns.com
+# Google:     8.8.8.8#dns.google 8.8.4.4#dns.google 2001:4860:4860::8888#dns.google 2001:4860:4860::8844#dns.google
+# Quad9:      9.9.9.9#dns.quad9.net 149.112.112.112#dns.quad9.net 2620:fe::fe#dns.quad9.net 2620:fe::9#dns.quad9.net
+DNS=1.1.1.1#cloudflare-dns.com 1.0.0.1#cloudflare-dns.com 2606:4700:4700::1111#cloudflare-dns.com 2606:4700:4700::1001#cloudflare-dns.com
+FallbackDNS=8.8.8.8#dns.google 8.8.4.4#dns.google 2001:4860:4860::8888#dns.google 2001:4860:4860::8844#dns.google
+#Domains=
+DNSSEC=no
+#DNSOverTLS=no
+#MulticastDNS=no
+#LLMNR=resolve
+#Cache=yes
+#CacheFromLocalhost=no
+#DNSStubListener=yes
+#DNSStubListenerExtra=
+#ReadEtcHosts=yes
+#ResolveUnicastSingleLabel=no
+```
+   >sudo systemctl restart systemd-resolved
 
