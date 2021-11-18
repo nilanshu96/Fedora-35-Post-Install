@@ -86,4 +86,8 @@ Basic setup guide for Fedora 35 after installation
    >dnf check-update
    >
    >sudo dnf install code
+   
+## Issue Fixes
+   ### Desktop glitching on resume Nvidia 495.44
+   >change NVreg_PreserveVideoMemoryAllocations from 1 to 0 in /usr/lib/modprobe.d/nvidia-power-management.conf
 
