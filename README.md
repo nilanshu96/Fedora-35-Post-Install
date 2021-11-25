@@ -90,6 +90,11 @@ Basic setup guide for Fedora 35 after installation
    >`dnf check-update`
    >
    >`sudo dnf install code`
+
+   ### Stopping NetworkManager and wpa_supplicant periodic scanning
+   > Open Settings -> Wifi -> Open your connection's settings -> Identity tab -> Open BSSID dropdown menu -> select the topmost option -> apply -> reconnect
+   
+   **Reason**: NetworkManager makes wpa_supplicant scan for networks/AP periodically. Only way to stop this is to assign a BSSID to the connected network. By doing this NetworkManager understands that I do not want to roam and will disable the periodic scanning behavior.
    
 ## Issue Fixes (Do not apply below fixes without facing the issues first)
    ### Desktop glitching on resume Nvidia 495.44
