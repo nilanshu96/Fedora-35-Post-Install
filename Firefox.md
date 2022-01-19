@@ -9,3 +9,4 @@
 ## Fix for crackling sound in sites like Udemy
 * Enter `about:config`
 * Set to **500** `media.eme.max-throughput-ms`
+* Check [link](https://bugzilla.mozilla.org/show_bug.cgi?id=1749804) for more info
