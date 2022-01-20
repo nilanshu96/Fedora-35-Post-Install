@@ -10,3 +10,7 @@
 * Enter `about:config`
 * Set to **500** `media.eme.max-throughput-ms`
 * Check [link](https://bugzilla.mozilla.org/show_bug.cgi?id=1749804) for more info
+
+## Enable EGL
+* `about:config`
+* Set to **true** `gfx.x11-egl.force-enabled`
