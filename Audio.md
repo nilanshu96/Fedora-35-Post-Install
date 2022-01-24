@@ -8,3 +8,5 @@
 ```
 
 **NOTE:** Enable Wireplumber if not running the using the command `systemctl --user --now enable wireplumber`. Check if wireplumber is running using `ps -e| grep wireplumber`.
+
+* To make a device specific change, run `pw-cli dump deep Device` and use the details shown to make changes in the above file.
