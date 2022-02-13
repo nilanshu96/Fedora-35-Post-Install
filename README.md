@@ -37,7 +37,7 @@ Basic setup guide for Fedora 35 after installation
    ### Installs support for Vulkan which has the same functionality as openGL
    >`sudo dnf install -y vulkan vulkan-tools`
    
-   ### To resolve issues that comes with nvidia when suspending system
+   ### To resolve issues that comes with nvidia when suspending system (Install only if suspend doesn't works)
    >`sudo dnf install xorg-x11-drv-nvidia-power`
    >
    >`sudo systemctl enable nvidia-{suspend,resume,hibernate}`
